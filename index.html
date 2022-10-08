@@ -9,64 +9,73 @@
 
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
 <body>
   <header>
-    <img src="./images/logo.svg" alt="Snap logo" width="84" height="27" class="header__logo">
-    <nav class="nav">
-      <button class="nav__closer" aria-label="nav-closer"><i class="icon-close"></i></button>
-      <ul class="main-menu">
-        <li class="main-menu__link"><a href="#">Features<i class="icon-arrow"></i></a>
-          <ul class="main-menu__dropdown">
-            <li class="main-menu__link"><a href="#"><i class="icon-todo"></i>Todo List</a></li>
-            <li class="main-menu__link"><a href="#"><i class="icon-calendar"></i>Calendar</a></li>
-            <li class="main-menu__link"><a href="#"><i class="icon-reminders"></i>Reminders</a></li>
-            <li class="main-menu__link"><a href="#"><i class="icon-planning"></i>Planning</a></li>
+    <div class="header__wrapper">
+      <img src="./images/logo.svg" alt="Snap logo" width="84" height="27" class="header__logo">
+      <nav class="nav">
+        <div class="nav__wrapper container">
+          <button class="nav__closer" aria-label="nav-closer"><i class="icon-close"></i></button>
+          <ul class="main-menu">
+            <li class="main-menu__link"><a href="#">Features<i class="icon-arrow"></i></a>
+              <ul class="main-menu__dropdown toggle">
+                <li class="main-menu__link"><a href="#"><i class="icon-todo"></i>Todo List</a></li>
+                <li class="main-menu__link"><a href="#"><i class="icon-calendar"></i>Calendar</a></li>
+                <li class="main-menu__link"><a href="#"><i class="icon-reminders"></i>Reminders</a></li>
+                <li class="main-menu__link"><a href="#"><i class="icon-planning"></i>Planning</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__link"><a href="#">Company<i class="icon-arrow"></i></a>
+              <ul class="main-menu__dropdown">
+                <li class="main-menu__link"><a href="#">History</a></li>
+                <li class="main-menu__link"><a href="#">Our team</a></li>
+                <li class="main-menu__link"><a href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__link"><a href="#">Careers</a></li>
+            <li class="main-menu__link"><a href="#">About</a></li>
           </ul>
-        </li>
-        <li class="main-menu__link"><a href="#">Company<i class="icon-arrow"></i></a>
-          <ul class="main-menu__dropdown">
-            <li class="main-menu__link"><a href="#">History</a></li>
-            <li class="main-menu__link"><a href="#">Our team</a></li>
-            <li class="main-menu__link"><a href="#">Blog</a></li>
-          </ul>
-        </li>
-        <li class="main-menu__link"><a href="#">Careers</a></li>
-        <li class="main-menu__link"><a href="#">About</a></li>
-      </ul>
 
-      <ul class="login-menu">
-        <li class="login-menu__link"><a href="#">Login</a></li>
-        <li class="login-menu__link"><a href="#">Register</a></li>
-      </ul>
-    </nav>
-    <button class="header__mobileBtn" aria-label="nav-open"><i class="icon-menu"></i></button>
+          <ul class="login-menu">
+            <li class="login-menu__link"><a href="#">Login</a></li>
+            <li class="login-menu__link login-menu__link--outline"><a href="#">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+      <button class="header__mobileBtn" aria-label="nav-open"><i class="icon-menu"></i></button>
+
+    </div>
   </header>
 
 
-  <main>
-    <aside class="hero__img">
-      <picture>
-        <source media="(min-width: 768px)" srcset="./images/image-hero-desktop.png" width="960" height="1280">
-        <img src="./images/image-hero-mobile.png" width="750" height="564" alt="Man on computer">
-      </picture>
-    </aside>
-    <section class="hero__text">
-      <h1 class="hero__title">Make remote work</h1>
-      <p class="hero__description">Get your team in sync, no matter your location. Streamline processes, create team
-        rituals, and watch productivity soar.</p>
-      <button class="hero__btn" aria-label="Learn more about remote work">Learn more</button>
-      <div class="hero__clients">
-        <img src="./images/client-databiz.svg" width="114" height="20" alt="databiz">
-        <img src="./images/client-audiophile.svg" width="73" height="37" alt="audiophile">
-        <img src="./images/client-meet.svg" width="90" height="20" alt="meet">
-        <img src="./images/client-maker.svg" width="83" height="24" alt="maker">
-      </div>
-    </section>
+  <main class="hero">
+    <div class="hero__wrapper container">
+      <aside class="hero__img">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./images/image-hero-desktop.png" width="960" height="1280">
+          <img src="./images/image-hero-mobile.png" width="750" height="564" alt="Man on computer">
+        </picture>
+      </aside>
+      <section class="hero__text">
+        <h1 class="hero__title">Make remote work</h1>
+        <p class="hero__description">Get your team in sync, no matter your location. Streamline processes, create team
+          rituals, and watch productivity soar.</p>
+        <button class="hero__btn" aria-label="Learn more about remote work">Learn more</button>
+        <div class="hero__clients">
+          <img src="./images/client-databiz.svg" width="114" height="20" alt="databiz">
+          <img src="./images/client-audiophile.svg" width="73" height="37" alt="audiophile">
+          <img src="./images/client-meet.svg" width="90" height="20" alt="meet">
+          <img src="./images/client-maker.svg" width="83" height="24" alt="maker">
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="attribution">
